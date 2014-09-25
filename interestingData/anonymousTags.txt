@@ -1,0 +1,280 @@
+#This is a comment
+#The De-identify details are here page 60 : http://medical.nema.org/Dicom/2011/11_15pu.pdf 
+#You can find in the tables page 65 (and next) of the same file
+#– D – replace with a non-zero length value that may be a dummy value and consistent with the VR 
+#– Z – replace with a zero length value, or a non-zero length value that may be a dummy value and consistent with the VR 
+#– X – remove 
+#– K – keep (unchanged for non-sequence attributes, cleaned for sequences) 
+#– C – clean, that is replace with values of similar meaning known not to contain identifying information and consistent with the VR 
+#– U – replace with a non-zero length UID that is internally consistent within a set of Instances
+
+0000|1000 __ U __   __ AffectedSOPInstanceUID
+0000|1001 __ U __   __ RequestedSOPInstanceUID 
+
+0002|0003 __ U __   __ MediaStorageSOPInstanceUID 
+
+0004|1511 __ U __   __ ReferencedSOPInstanceUIDinFile 
+
+0008|0014 __ U __   __ InstanceCreatorUID 
+0008|0018 __ U __   __ SOPInstanceUID 
+0008|0020 __ X __   __ StudyDate
+0008|0021 __ X __   __ SeriesDate  
+0008|0022 __ X __   __ AcquisitionDate
+0008|0023 __ X __   __ ContentDate 
+0008|0024 __ X __   __ OverlayDate 
+0008|0025 __ X __   __ Curve Date  
+0008|002A __ X __   __ AcquisitionDateTime
+0008|0030 __ X __   __ StudyTime
+0008|0031 __ X __   __ SeriesTime
+0008|0032 __ X __   __ AcquisitionTime
+0008|0033 __ X __   __ ContentTime 
+0008|0034 __ X __   __ OverlayTime 
+0008|0035 __ X __   __ Curve Time 
+0008|0050 __ Z __  __ AccessionNumber
+0008|0058 __ U __   __ FailedSOPInstanceUIDList 
+0008|0080 __ X __   __ InstitutionName 
+0008|0081 __ X __   __ InstitutionAddress
+0008|0082 __ X __   __ InstitutionCodeSequence 
+0008|0090 __ Z __ Unknown^Unknown __ ReferringPhysiciansName 
+0008|0092 __ X __   __ ReferringPhysiciansAddress 
+0008|0094 __ X __   __ ReferringPhysiciansTelephoneNumbers 
+0008|0096 __ X __   __ ReferringPhysiciansIdentificationSequence 
+0008|010D __ U __   __ ContextGroupExtensionCreatorUID 
+0008|0201 __ X __   __ TimezoneOffsetFromUTC 
+0008|1010 __ X __   __ StationName
+0008|1030 __ X __   __ StudyDescription
+0008|103E __ X __   __ SeriesDescription 
+0008|1040 __ X __   __ InstitutionalDepartmentName 
+0008|1048 __ X __   __ PhysiciansOfRecord 
+0008|1049 __ X __   __ PhysiciansOfRecordIdentificationSequence 
+0008|1050 __ X __   __ PerformingPhysiciansName 
+0008|1052 __ X __   __ PerformingPhysiciansIdentificationSequence 
+0008|1060 __ X __   __ NameOfPhysiciansReadingStudy 
+0008|1062 __ X __   __ PhysicianReadingStudyIdentificationSequence 
+0008|1070 __ X __   __ OperatorsName 
+0008|1072 __ X __   __ OperatorsIdentificationSequence 
+0008|1080 __ X __   __ AdmittingDiagnosesDescription
+0008|1084 __ X __   __ AdmittingDiagnosesCodeSequence
+0008|1110 __ X __   __ ReferencedStudySequence
+0008|1111 __ X __   __ ReferencedPerformedProcedureStepSequence 
+0008|1120 __ X __   __ ReferencedPatientSequence 
+0008|1140 __ X __   __ ReferencedImageSequence 
+0008|1155 __ U __   __ ReferencedSOPInstanceUID 
+0008|1195 __ U __   __ TransactionUID
+0008|2111 __ X __   __ DerivationDescription 
+0008|2112 __ X __   __ SourceImageSequence
+0008|3010 __ U __   __ IrradiationEventUID 
+0008|4000 __ X __   __ IdentifyingComments 
+0008|9123 __ U __   __ CreatorVersionUID  
+
+0010|0010 __ Z __ Unknown^Unknown __ PatientName
+0010|0020 __ Z __  __ PatientID
+0010|0021 __ X __   __ IssuerOfPatientID 
+0010|0030 __ Z __ 00000000 __ PatientBirthDate
+0010|0032 __ X __   __ PatientBirthTime
+0010|0040 __ Z __ U __ PatientSex
+0010|0050 __ X __   __ PatientsInsurancePlanCodeSequence 
+0010|0101 __ X __   __ PatientsPrimaryLanguageCodeSequence 
+0010|0102 __ X __   __ PatientsPrimaryLanguageModifierCodeSequence 
+0010|1000 __ X __   __ OtherPatientIDs
+0010|1001 __ X __   __ OtherPatientNames
+0010|1002 __ X __   __ OtherPatientIDsSequence 
+0010|1005 __ X __   __ PatientBirthName
+0010|1010 __ X __   __ PatientAge
+0010|1020 __ X __   __ PatientSize
+0010|1030 __ X __   __ PatientWeight
+0010|1040 __ X __   __ PatientAddress
+0010|1050 __ X __   __ InsurancePlanIdentification 
+0010|1060 __ X __   __ PatientMotherBirthName
+0010|1080 __ X __   __ MilitaryRank 
+0010|1081 __ X __   __ BranchOfService
+0010|1090 __ X __   __ MedicalRecordLocator 
+0010|2000 __ X __   __ MedicalAlerts 
+0010|2203 __ X __   __ PatientSexNeutered 
+0010|2110 __ X __   __ Allergies
+0010|2150 __ X __   __ CountryOfResidence 
+0010|2152 __ X __   __ RegionOfResidence
+0010|2154 __ X __   __ PatientsTelephoneNumber 
+0010|2160 __ X __   __ Ethnic Group
+0010|2180 __ X __   __ Occupation 
+0010|21A0 __ X __   __ SmokingStatus
+0010|21B0 __ X __   __ AdditionnalPatientHistory
+0010|21C0 __ X __   __ PregnancyStatus 
+0010|21D0 __ X __   __ LastMenstrualDate 
+0010|21F0 __ X __   __ PatientsReligiousPreference 
+0010|2297 __ X __   __ ResponsiblePerson 
+0010|2299 __ X __   __ ResponsibleOrganization
+0010|4000 __ X __   __ PatientComments 
+
+0018|0010 __ Z __  __ ContrastBolusAgent 
+0018|1000 __ X __   __ DeviceSerialNumber 
+0018|1002 __ U __   __ DeviceUID
+0018|1004 __ X __   __ PlateID 
+0018|1005 __ X __   __ GeneratorID
+0018|1008 __ X __   __ GantryID
+0018|1007 __ X __   __ CassetteID
+0018|1030 __ X __   __ ProtocolName  
+0018|1400 __ X __   __ AcquisitionDeviceProcessingDescription
+0018|4000 __ X __   __ AcquisitionComments
+0018|700A __ X __   __ DetectorID 
+0018|9424 __ X __   __ AcquisitionProtocolDescription
+0018|A003 __ X __   __ ContributionDescription 
+
+0020|000D __ U __   __ StudyInstanceUID
+0020|000E __ U __   __ SeriesInstanceUID 
+0020|0010 __ Z __ 0 __ StudyID
+0020|0052 __ U __   __ FrameofReferenceUID 
+0020|0200 __ U __   __ SynchronizationFrameOfReferenceUID
+0020|3401 __ X __   __ ModifyingDeviceID 
+0020|3404 __ X __   __ ModifyingDeviceManufacturer 
+0020|3406 __ X __   __ ModifiedImageDescription 
+0020|4000 __ X __   __ ImageComments
+0020|9158 __ X __   __ FrameComments
+0020|9161 __ U __   __ ConcatenationUID
+0020|9164 __ U __   __ DimensionOrganizationUID 
+
+0028|1199 __ U __   __ PaletteColorLookupTableUID 
+0028|1214 __ U __   __ LargePaletteColorLookupTableUID 
+0028|4000 __ X __   __ ImagePresentationComments 
+
+0032|0012 __ X __   __ StudyIDIssuer
+0032|1020 __ X __   __ ScheduledStudyLocation 
+0032|1021 __ X __   __ ScheduledStudyLocationAETitle
+0032|1030 __ X __   __ ReasonForStudy 
+0032|1032 __ X __   __ RequestingPhysician
+0032|1033 __ X __   __ RequestingService 
+0032|1060 __ X __   __ RequestedProcedureDescription 
+0032|1070 __ X __   __ RequestedContrastAgent 
+0032|4000 __ X __   __ StudyComments
+
+0038|0010 __ X __   __ AdmissionID
+0038|0011 __ X __   __ IssuerOfAdmissionID 
+0038|001E __ X __   __ ScheduledPatientInstitutionResidence 
+0038|0020 __ X __   __ AdmittingDate
+0038|0021 __ X __   __ AdmittingTime
+0038|0040 __ X __   __ DischargeDiagnosisDescription 
+0038|0050 __ X __   __ Special Needs
+0038|0060 __ X __   __ ServiceEpisodeID
+0038|0061 __ X __   __ IssuerOfServiceEpisodeID
+0038|0062 __ X __   __ ServiceEpisodeDescription  
+0038|0300 __ X __   __ CurrentPatientLocation 
+0038|0400 __ X __   __ PatientsInstitutionResidence 
+0038|0500 __ X __   __ PatientState 
+0038|1234 __ X __   __ ReferencedPatientAliasSequence 
+0038|4000 __ X __   __ VisitComments 
+
+0040|0001 __ X __   __ ScheduledStationAETitle 
+0040|0002 __ X __   __ ScheduledProcedureStepStartDate
+0040|0003 __ X __   __ ScheduledProcedureStepStartTime 
+0040|0004 __ X __   __ ScheduledProcedureStepEndDate 
+0040|0005 __ X __   __ ScheduledProcedureStepEndTime 
+0040|0006 __ X __   __ ScheduledPerformingPhysicianName 
+0040|0007 __ X __   __ ScheduledProcedureStepDescription 
+0040|000B __ X __   __ ScheduledPerformingPhysicianIdentificationSequence
+0040|0010 __ X __   __ ScheduledStationName 
+0040|0011 __ X __   __ ScheduledProcedureStepLocation 
+0040|0012 __ X __   __ Pre-Medication 
+0040|0241 __ X __   __ PerformedStationAETitle
+0040|0242 __ X __   __ PerformedStationName  
+0040|0243 __ X __   __ PerformedLocation 
+0040|0244 __ X __   __ PerformedProcedureStepStartDate 
+0040|0245 __ X __   __ PerformedProcedureStepStartTime 
+0040|0248 __ X __   __ PerformedStationNameCodeSequence 
+0040|0253 __ X __   __ PerformedProcedureStepID 
+0040|0254 __ X __   __ PerformedProcedureStepDescription 
+0040|0275 __ X __   __ RequestAttributesSequence 
+0040|0280 __ X __   __ CommentsOnPerformedProcedureStep
+0040|0555 __ X __   __ AcquisitionContextSequence
+0040|1001 __ X __   __ RequestedProcedureID 
+0040|1005 __ X __   __ RequestedProcedureLocation 
+0040|1101 __ D __ 0 __ PersonIdentificationCodeSequence 
+0040|1102 __ X __   __ PersonAddress 
+0040|1103 __ X __   __ PersonTelephoneNumbers 
+0040|1004 __ X __   __ PatientTransportArrangements 
+0040|1010 __ X __   __ NamesOfIntendedRecipientOfResults 
+0040|1011 __ X __   __ IntendedRecipientsOfResultsIdentificationSequence 
+0040|1400 __ X __   __ RequestedProcedureComments 
+0040|2001 __ X __   __ ReasonForImagingServiceRequest 
+0040|2008 __ X __   __ OrderEnteredBy 
+0040|2009 __ X __   __ OrderEntererLocation 
+0040|2010 __ X __   __ OrderCallbackPhoneNumber 
+0040|2016 __ Z __ 0 __ PlacerOrderNumberOfImagingServiceRequest
+0040|2017 __ Z __  __ FillerOrderNumberOfImagingServiceRequest 
+0040|2400 __ X __   __ ImagingServiceRequestComments
+0040|3001 __ X __   __ ConfidentialityConstraintOnPatientDataDescription
+0040|4023 __ U __   __ ReferencedGeneralPurposeScheduledProcedureStepTransactionUID 
+0040|4025 __ X __   __ ScheduledStationNameCodeSequence 
+0040|4027 __ X __   __ ScheduledStationGeographicLocationCodeSequence
+0040|4030 __ X __   __ PerformedStationGeographicLocationCodeSequence 
+0040|4034 __ X __   __ ScheduledHumanPerformersSequence
+0040|4035 __ X __   __ ActualHumanPerformersSequence
+0040|4036 __ X __   __ HumanPerformersOrganization 
+0040|4037 __ X __   __ HumanPerformersName 
+0040|A027 __ X __   __ VerifyingOrganization
+0040|A073 __ D __ Unknown^Unknown __ VerifyingObserverSequence 
+0040|A075 __ D __ Unknown^Unknown __ VerifyingObserverName
+0040|A078 __ X __   __ AuthorObserverSequence
+0040|A07A __ X __   __ ParticipantSequence 
+0040|A07C __ X __   __ CustodialOrganizationSequence 
+0040|A088 __ Z __ 0 __ VerifyingObserverIdentificationCodeSequence 
+0040|A123 __ D __ Unknown^Unknown __ PersonName  
+0040|A124 __ U __   __ UID
+0040|A730 __ X __   __ ContentSequence 
+0040|DB0C __ U __   __ TemplateExtensionOrganizationUID
+0040|DB0D __ U __   __ TemplateExtensionCreatorUID
+
+0070|0001 __ D __ Unknown __ GraphicAnnotationSequence 
+0070|031A __ U __   __ FiducialUID 
+0070|0084 __ Z __ Unknown^Unknown __ ContentCreatorsName 
+0070|0086 __ X __   __ ContentCreatorsCodeSequence
+
+0088|0140 __ U __   __ StorageMediaFilesetUID
+0088|0200 __ X __   __ IconImageSequence
+0088|0904 __ X __   __ TopicTitle  
+0088|0906 __ X __   __ TopicSubject 
+0088|0910 __ X __   __ TopicAuthor 
+0088|0912 __ X __   __ TopicKeyWords  
+
+0400|0100 __ X __   __ DigitalSignatureUID 
+0400|0402 __ X __   __ ReferencedDigitalSignatureSequence 
+0400|0403 __ X __   __ ReferencedSOPInstanceMACSequence 
+0400|0404 __ X __   __ MAC 
+0400|0550 __ X __   __ ModifiedAttributesSequence 
+0400|0561 __ X __   __ OriginalAttributesSequence 
+
+2030|0020 __ X __   __ TextString 
+
+3006|0024 __ U __   __ ReferencedFrameOfReferenceUID 
+3006|00C2 __ U __   __ RelatedFrameOfReferenceUID 
+300A|0013 __ U __   __ DoseReferenceUID
+300E|0008 __ X __   __ ReviewerName 
+
+4000|0010 __ X __   __ Arbitrary
+4000|4000 __ X __   __ TextComments
+
+4008|0042 __ X __   __ ResultsIDIssuer 
+4008|0102 __ X __   __ InterpretationRecorder 
+4008|010A __ X __   __ InterpretationTranscriber 
+4008|010B __ X __   __ InterpretationText 
+4008|010C __ X __   __ InterpretationAuthor 
+4008|0111 __ X __   __ InterpretationApproverSequence 
+4008|0114 __ X __   __ PhysicianApprovingInterpretation 
+4008|0115 __ X __   __ InterpretationDiagnosisDescription 
+4008|0118 __ X __   __ ResultsDistributionListSequence 
+4008|0119 __ X __   __ DistributionName
+4008|011A __ X __   __ DistributionAddress
+4008|0202 __ X __   __ InterpretationIDIssuer 
+4008|0300 __ X __   __ Impressions 
+4008|4000  __ X __   __ ResultsComments 
+
+50xx|xxxx __ X __   __ Curve Data
+
+60xx|3000 __ X __   __ OverlayData  
+60xx|4000 __ X __   __ OverlayComments 
+
+FFFA|FFFA __ X __   __ DigitalSignaturesSequence
+FFFC|FFFC __ X __   __ DataSetTrailingPadding 
+
+###
+
+

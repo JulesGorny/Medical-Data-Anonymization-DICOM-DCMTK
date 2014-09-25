@@ -1,0 +1,8 @@
+0018|0023 __ MR acquisition type
+0008|1030 __ Study description
+0008|103e __ Series description
+0010|21b0 __ Additionnal patient history
+0018|0050 __ Slice thickness
+0018|0088 __ Spacing between slices
+0018|1030 __ Protocol name
+0028|0030 __ Pixel Spacing
